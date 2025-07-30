@@ -1,0 +1,131 @@
+\documentclass[9pt,a4paper]{moderncv}
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\usepackage{pifont}
+\usepackage{xcolor}
+\renewcommand{\normalsize}{\fontsize{8.5}{9}\selectfont}
+\renewcommand{\small}{\fontsize{7.5}{8.5}\selectfont}
+
+\usepackage[scale=0.85]{geometry}
+\usepackage{multicol}
+
+% Personal info
+\name{Beckett}{Frey}
+\address{Madison, WI, USA}{}
+\email{john.doe@example.com}
+\phone[mobile]{555-555-5555}
+\homepage{beckettfrey.com}
+\social[github]{BeckettFrey}
+\social[linkedin]{beckettfrey}
+
+\vspace{-2.5em}
+
+\begin{document}
+
+\makecvtitle
+
+\vspace{-1.0em}
+
+\section{Summary}
+Self-driven CS graduate with full-stack and ML experience, proficient in JavaScript, Python, and cloud-native systems. 
+Take initiative while thriving in collaborative environments, continuously learning from skilled engineers. 
+Confident in tackling complex challenges, grounded in continuous growth, and ready to deliver scalable results.
+
+\section{Technical Skills}
+\cvitem{Languages}{Python, JavaScript (ES6+), TypeScript, SQL}
+\cvitem{Frameworks}{React, Next.js, Node.js, Django, Vite}
+\cvitem{Databases}{MongoDB, PostgreSQL, MySQL}
+\cvitem{CI/CD Tools}{Docker, Vercel, Render, Heroku, GitHub Actions}
+\cvitem{Cloud Plats}{AWS, GCP (basic familiarity)}
+\cvitem{Dev Tools}{Git, Jira, Trello, Figma}
+\cvitem{ML Tools}{PyTorch, scikit-learn, Modal}
+\cvitem{Testing}{Jest, Pytest}
+
+\section{Projects}
+
+\cventry{2025}{Rod Royale (Full-Stack App)}{FastAPI, React Native, MongoDB, Docker}{}{}{
+\begin{itemize}
+  \item \href{https://www.youtube.com/watch?v=6ZqDfPWTeqM}{\textbf{\textcolor{purple}{Watch Demo Video}}}
+  \item Developed a RESTful API with async MongoDB and JWT authentication
+  \item Integrated Codecov for automated test coverage
+  \item Built a full-stack social fishing app enabling real-time catch sharing
+\end{itemize}
+} 
+
+\cventry{2025}{ChessLink – Real-Time Chess}{TypeScript, WebSocket, Node.js}{}{}{
+\begin{itemize}
+  \item \href{https://chess-link-client.vercel.app/}{\textbf{\textcolor{purple}{View Live Demo}}}
+  \item WebSocket backend with FEN parsing and game state sync
+  \item Deployed full-stack app to Render/Vercel
+\end{itemize}
+}
+
+\cventry{2024}{Portfolio – Cross-Platform}{Next.js, Vercel, GitHub API}{}{}{
+\begin{itemize}
+  \item \href{https://beckettfrey.com}{\textbf{\textcolor{purple}{View Deployment}}}
+  \item Implemented responsive design for seamless usability across devices
+  \item Applied SEO best practices and leveraged SSR/SSG for discoverability
+\end{itemize}
+}
+
+\cventry{2025}{UPlant – Garden Management}{React, Django, AWS}{Team of 4}{}{
+\begin{itemize}
+  \item Led frontend development in a Scrum workflow
+  \item Linked REST API for garden logs, plant data, and alerts
+\end{itemize}
+}
+
+\cventry{2024}{Unsubify (Hackathon)}{OAuth, JavaScript, REST APIs}{}{}{
+\begin{itemize}
+  \item Gmail API tool for auto-unsubscribing spam; dashboard for management
+  \item Secured with OAuth 2.0 authentication
+\end{itemize}
+}
+
+\cventry{2024}{Developer CLI Tools}{LangGraph, Python}{}{}{
+\begin{itemize}
+  \item \textbf{CodeLibre:} Git automation with conversational commands
+  \item \textbf{Headerizer:} Auto file headers for AI context
+  \item \textbf{Bonsai:} Directory tree CLI with \texttt{.gitignore} support
+\end{itemize}
+}
+
+\section{Experience}
+\cventry{2024--Present}{Junior ML Engineer}{Hyprchs (Remote)}{}{}{
+\begin{itemize}
+  \item Built synthetic data pipelines; trained 25+ YOLO models for object detection
+  \item Leveraged Modal serverless compute to overcome local hardware limits and scale training
+\end{itemize}
+}
+
+\cventry{2023--2024}{Customer Service Associate}{Sendik's Food Market}{Milwaukee, WI}{}{
+\begin{itemize}
+  \item Served customers at meat counter and trained new closing staff
+\end{itemize}
+}
+
+\cventry{2022}{Sales Rep \& Mechanic}{Budget Bicycle Center Inc.}{Madison, WI}{}{
+\begin{itemize}
+  \item Built and repaired bicycles; assisted with sales and fitting
+\end{itemize}
+}
+
+\section{Education}
+\cventry{May 2025}{B.S. Computer Science}{University of Wisconsin–Milwaukee}{Milwaukee, WI}{}{
+\textbf{GPA:} 3.33 \\
+\textbf{Honors:} Dean's Honor List (Fall 2024, Spring 2025) \\
+\textbf{Coursework:} Software Engineering, Algorithms, Operating Systems, Machine Learning
+}
+
+\section{Community \& Involvement}
+
+\cventry{2023 \& 2025}{Volunteer Bartender}{Fond Blanc Foundation}{}{}{
+Supported youth education at “Rally on the Runway” fundraiser
+}
+\cventry{2024}{Participant, MadHacks – UW Madison}{Hackathon Project}{}{}{
+Built \textit{Unsubify}, a full-stack email management tool using Gmail API
+}
+\cventry{2024}{Open-Source Contributor}{Various Projects}{}{}{ Enhanced \texttt{chessboard.js}; actively contributing and seeking new projects.
+}
+
+\end{document}
