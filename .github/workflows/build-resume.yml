@@ -41,6 +41,5 @@ jobs:
           name: "Latest Resume"
           body: "Automatically generated PDF from LaTeX source"
           files: resume.pdf
-          make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
