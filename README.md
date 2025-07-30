@@ -10,8 +10,6 @@ This repository contains the LaTeX source for my professional resume, with autom
 
 ## 🔧 How It Works
 
-- Push changes to `resume.tex`
-- GitHub Action automatically compiles to PDF
-- Latest version always available via the download link above
+I use GitHub Actions to automatically compile the LaTeX source into a PDF whenever I make changes. The latest version is always available through the download link above.
 
 Built with LaTeX + GitHub Actions automation.
