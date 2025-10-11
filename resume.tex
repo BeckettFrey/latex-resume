@@ -2,17 +2,17 @@
 \moderncvstyle{classic}
 \moderncvcolor{blue}
 \usepackage{pifont}
-\renewcommand{\normalsize}{\fontsize{8.0}{9.0}\selectfont}
-\renewcommand{\small}{\fontsize{7.0}{8.0}\selectfont}
+\renewcommand{\normalsize}{\fontsize{9.0}{10.0}\selectfont}
+\renewcommand{\small}{\fontsize{8.0}{9.0}\selectfont}
 
-\usepackage[scale=0.90]{geometry}
+\usepackage[scale=0.80]{geometry}
 \usepackage{multicol}
 
 % Personal info
 \name{Beckett}{Frey}
 \address{Madison, WI, USA}{}
-\email{john.doe@example.com}
-\phone[mobile]{555-555-5555}
+\email{beckett.frey@gmail.com}
+\phone[mobile]{608-886-7211}
 \homepage{beckettfrey.com}
 \social[github]{BeckettFrey}
 \social[linkedin]{beckettfrey}
@@ -24,87 +24,55 @@
 \makecvtitle
 
 \section{Summary}
-Self-driven CS graduate with full-stack and ML experience, proficient in JavaScript, Python, and cloud-native systems. 
-Take initiative while thriving in collaborative environments, continuously learning from skilled engineers. 
-Confident in tackling complex challenges, grounded in continuous growth, and ready to deliver scalable results.
+Recent CS graduate with production experience in ML/AI and full-stack development. Skilled at identifying bottlenecks and building scalable solutions using cloud-native tools and modern frameworks. 
+\section{Experience}
+
+\cventry{2025--Present}{Research Intern}{Waisman Center}{Madison, WI}{}{
+\begin{itemize}
+\item Deployed MLOps infrastructure across multiple speech pathology research repositories using Docker
+\item Designed systems to streamline healthcare data wrangling pipelines, reducing manual labor by 20\% 
+\item Configure and calibrate specialized research equipment (Tobii eye trackers, studio-grade audio systems)
+\end{itemize}
+}
+
+\cventry{2024--2025}{Junior ML Engineer}{Hyprchs (Remote)}{}{}{
+\begin{itemize}
+  \item Engineered synthetic data pipelines to train 25 object detection models, achieving over 99\% accuracy via a model ensemble.
+  \item Leveraged Modal serverless compute to overcome local hardware limits and scale training
+\end{itemize}
+}
+
+\cventry{2023--2024}{Customer Service Associate}{Sendik's Food Market}{Milwaukee, WI}{}{}
+\cventry{2022}{Sales Rep \& Mechanic}{Budget Bicycle Center Inc.}{Madison, WI}{}{}
 
 \section{Technical Skills}
-\cvitem{Languages}{Python, JavaScript (ES6+), TypeScript, SQL}
-\cvitem{Frameworks}{React, Next.js, Node.js, Django, Vite}
-\cvitem{Databases}{MongoDB, PostgreSQL, MySQL}
-\cvitem{CI/CD Tools}{Docker, Vercel, Render, Heroku, GitHub Actions}
-\cvitem{Cloud Plats}{AWS, GCP (basic familiarity)}
-\cvitem{Dev Tools}{Git, Jira, Trello, Figma}
-\cvitem{ML Tools}{PyTorch, scikit-learn, Modal}
-\cvitem{Testing}{Jest, Pytest}
+\cvitem{Languages}{Python, JavaScript/TypeScript, SQL, R}
+\cvitem{Frameworks}{React, Next.js, Node.js, Django}
+\cvitem{Cloud/DevOps}{Docker, AWS, GCP, Vercel, GitHub Actions}
+\cvitem{ML \& Testing}{PyTorch, scikit-learn, Modal, Jest, Pytest}
 
 \section{Projects}
 
-\cventry{2025}{Rod Royale (Full-Stack App)}{FastAPI, React Native, MongoDB, Docker}{}{}{
-\begin{itemize}
-  \item \href{https://www.youtube.com/watch?v=6ZqDfPWTeqM}{\textbf{\textcolor{purple}{Watch Demo Video}}}
-  \item Developed a RESTful API with async MongoDB and JWT authentication
-  \item Integrated Codecov for automated test coverage
-  \item Built a full-stack social fishing app enabling real-time catch sharing
-\end{itemize}
-} 
-
 \cventry{2025}{MCP Cabinets – Context Engineering}{Vector Search, Chrome Extension, FastMCP}{}{}{
 \begin{itemize}
-  \item \href{https://github.com/BeckettFrey/ContextCaddy/blob/main/assets/example.gif}{\textbf{\textcolor{purple}{View Gif Demo}}}
-  \item Built AI-powered knowledge system enabling seamless web content collection and semantic search
-  \item Developed MCP server connecting AI assistants to indexed knowledge base with real-time retrieval
+  \item \href{https://github.com/BeckettFrey/ContextCaddy/blob/main/assets/example.gif}{\textbf{\textcolor{blue}{View Gif Demo}}}
+  \item Built Chrome extension with vector search for capturing and retrieving web content semantically
+   \item Developed FastMCP server enabling Claude to query indexed knowledge base in real-time
 \end{itemize}
 }
 
 \cventry{2025}{Chess Link – Real-Time Chess}{TypeScript, WebSocket, Node.js}{}{}{
 \begin{itemize}
-  \item \href{https://chess-link-client.vercel.app/}{\textbf{\textcolor{purple}{View Live Demo}}}
-  \item WebSocket backend with FEN parsing and game state sync
-  \item Deployed full-stack app to Render/Vercel
+  \item \href{https://chess-link-client.vercel.app/}{\textbf{\textcolor{blue}{View Live Demo}}}
+  \item Engineered WebSocket server handling real-time game state synchronization
+  \item Built React client to demonstrate functionality
 \end{itemize}
 }
-
-\cventry{2024}{Portfolio – Cross-Platform}{Next.js, Vercel, GitHub API}{}{}{
-\begin{itemize}
-  \item \href{https://beckettfrey.com}{\textbf{\textcolor{purple}{View Deployment}}}
-  \item Implemented responsive design for seamless usability across devices
-  \item Applied SEO best practices and leveraged SSR/SSG for discoverability
-\end{itemize}
-}
-
-\cventry{2025}{UPlant – Garden Management}{React, Django, AWS}{Team of 4}{}{
-\begin{itemize}
-  \item Led frontend development in a Scrum workflow
-  \item Linked REST API for garden logs, plant data, and alerts
-\end{itemize}
-}
-
 \cventry{2024}{Developer CLI Tools}{LangGraph, Python}{}{}{
 \begin{itemize}
   \item \textbf{CodeLibre:} Git automation with conversational commands
   \item \textbf{Headerizer:} Auto file headers for AI context
   \item \textbf{Bonsai:} Directory tree CLI with \texttt{.gitignore} support
-\end{itemize}
-}
-
-\section{Experience}
-\cventry{2024--Present}{Junior ML Engineer}{Hyprchs (Remote)}{}{}{
-\begin{itemize}
-  \item Built synthetic data pipelines; trained 25+ YOLO models for object detection
-  \item Leveraged Modal serverless compute to overcome local hardware limits and scale training
-\end{itemize}
-}
-
-\cventry{2023--2024}{Customer Service Associate}{Sendik's Food Market}{Milwaukee, WI}{}{
-\begin{itemize}
-  \item Served customers at meat counter and trained new closing staff
-\end{itemize}
-}
-
-\cventry{2022}{Sales Rep \& Mechanic}{Budget Bicycle Center Inc.}{Madison, WI}{}{
-\begin{itemize}
-  \item Built and repaired bicycles; assisted with sales and fitting
 \end{itemize}
 }
 
@@ -123,15 +91,14 @@ Confident in tackling complex challenges, grounded in continuous growth, and rea
   \href{https://github.com/kobotoolbox}{\texttt{kobotoolbox}}, 
   and \href{https://envirodatagov.org/}{\texttt{EDGI}}.
 }
-\cventry{2025--Present}{Volunteer in Training}{UW Health System}{}{}{
-Undergoing onboarding and health clearance to begin service at UW Health
-}
 \cventry{2023 \& 2025}{Volunteer Bartender}{Fond Blanc Foundation}{}{}{
 Supported youth education at “Rally on the Runway” fundraiser
+}
+\cventry{2025--Present}{Volunteer in Training}{UW Health System}{}{}{
+Undergoing onboarding and health clearance to begin service at UW Health
 }
 \cventry{2024}{Participant, MadHacks – UW Madison}{Hackathon Project}{}{}{
 Built \textit{Unsubify}, a full-stack email management tool using Gmail API
 }
-
 
 \end{document}
