@@ -1,0 +1,99 @@
+\documentclass[8pt,a4paper]{moderncv}
+\moderncvstyle{classic}
+\moderncvcolor{black}
+\usepackage{pifont}
+\renewcommand{\normalsize}{\fontsize{9.0}{10.0}\selectfont}
+\renewcommand{\small}{\fontsize{8.0}{9.0}\selectfont}
+
+\usepackage[scale=0.80]{geometry}
+\usepackage{multicol}
+
+% Personal info
+\name{Beckett}{Frey}
+\address{Madison, WI, USA}{Willing to relocate}
+\email{beckett.career@outlook.com}
+\homepage{beckettfrey.com}
+\social[github]{BeckettFrey}
+\social[linkedin]{beckettfrey}
+
+\vspace{-2.5em}
+
+\begin{document}
+
+\makecvtitle
+
+\section{Summary}
+Software engineer and recent CS graduate who builds things that matter; with a sharp
+  focus on DevOps, developer experience, and security, particularly in environments where data integrity and compliance are non-negotiable. Approaches AI-assisted development deliberately:
+  leveraging automation where it earns trust, and knowing when it hasn't.
+\section{Experience}
+
+\cventry{2025--Present}{Research Intern}{Waisman Center}{Madison, WI}{}{
+\begin{itemize}
+\item Developed VoxKit, a GUI application bridging state-of-the-art audio ML models and clinical research workflows
+\item Designed CI/CD pipelines, establishing contributor norms that address the emerging distinction between human and agent authorship
+\item Consolidated reproducible workflows across lab repositories, aiding a 20+ year longitudinal data collection effort
+\item Implemented PHI-scanning tooling and data-leakage safeguards to protect sensitive research data across the full development lifecycle
+\end{itemize}
+}
+
+\cventry{2024--2025}{Junior ML Engineer}{Hyprchs (Remote)}{}{}{
+\begin{itemize}
+  \item Engineered synthetic data pipelines to train 25 object detection models, achieving over 99\% accuracy via a model ensemble
+  \item Leveraged Modal serverless compute to overcome local hardware limits and scale training
+\end{itemize}
+}
+
+\section{Familiar Technologies}
+\cvitem{Languages}{Python, Bash, TypeScript/JavaScript, SQL, R}
+\cvitem{Frameworks}{Django, LangGraph, Node.js, React, Next.js}
+\cvitem{Cloud/DevOps}{Docker, GitHub Actions, AWS, Vercel, Modal}
+\cvitem{ML \& AI}{PyTorch, Anthropic SDK}
+\cvitem{Testing}{Pytest, Vitest}
+
+\section{Projects}
+
+\cventry{2026}{Continuous Autonomy}{Founder --- Early-Stage Startup}{}{}{
+\begin{itemize}
+  \item Infrastructure startup rethinking the software development lifecycle, for a world where agents are collaborators
+\end{itemize}
+}
+
+\cventry{2025}{SpeechMine - Audio Formatting Toolkit}{Faster-Whisper, PyAnnote, RapidFuzz}{}{}{
+\begin{itemize}
+  \item Converts raw recordings into searchable, speaker-labeled transcripts, replacing labor-intensive manual audio formatting workflows
+\end{itemize}
+}
+
+\cventry{2025}{ContextCaddy / MCP Cabinets}{Python, Llama Index}{}{}{
+\begin{itemize}
+  \item RAG system with configurable vector indexing; paired Chrome extension for saving and retrieving text chunks in real time, for specialized domains
+\end{itemize}
+}
+
+\cventry{2025}{AI-Assisted Dev Tools}{Python, LangGraph, GitHub Actions}{}{}{
+\begin{itemize}
+  \item Suite of focused developer tooling: Bonsai (.gitignore-aware tree viewer for AI/CI workflows), Headerizer (file path header stamper), CodeLibre (human-in-the-loop Git automation), Doc Weaver (LangGraph document hydration agent)
+\end{itemize}
+}
+
+\section{Education}
+\cventry{May 2025}{B.S. Computer Science}{University of Wisconsin–Milwaukee}{Milwaukee, WI}{}{
+\textbf{Honors:} Dean's Honor List (Fall 2024, Spring 2025) \\
+\textbf{GPA:} 3.33 \\
+\textbf{Coursework:} Computer Security, Machine Learning, Algorithms, Operating Systems
+}
+
+\section{Community \& Involvement}
+
+\cventry{2023--Present}{Open-Source Contributor}{Various Projects}{}{}{
+  Contributions to \href{https://github.com/OpenZeppelin}{\texttt{OpenZeppelin}}, 
+  \href{https://github.com/aws-powertools}{\texttt{AWS Powertools}}, 
+  \href{https://github.com/kobotoolbox}{\texttt{kobotoolbox}}, 
+  and \href{https://envirodatagov.org/}{\texttt{EDGI}}.
+}
+\cventry{2024}{Participant, MadHacks – UW Madison}{Hackathon Project}{}{}{
+Built \textit{Unsubify}, a full-stack spam management tool using Gmail API
+}
+
+\end{document}
