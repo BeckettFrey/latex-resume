@@ -1,0 +1,5 @@
+[project]
+name = "latex-resume"
+version = "1.0.0"
+description = "LaTeX Resume"
+authors = [{name = "Beckett Frey", email = "code@beckettfrey.com"}]
