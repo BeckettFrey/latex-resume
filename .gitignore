@@ -10,5 +10,13 @@
 # OS files
 .DS_Store
 
-# Local configuration files
-.gitignore
+# Local Files
+certifications/
+community/
+education/
+experience/
+projects/
+profile.md
+PROJECTS.md
+CLAUDE.md
+.claude/
