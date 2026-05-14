@@ -1,96 +1,309 @@
-\documentclass[8pt,a4paper]{moderncv}
-\moderncvstyle{classic}
-\moderncvcolor{black}
-\usepackage{pifont}
-\renewcommand{\normalsize}{\fontsize{9.0}{10.0}\selectfont}
-\renewcommand{\small}{\fontsize{8.0}{9.0}\selectfont}
+%-------------------------
+% Resume in Latex
+% Author : Vaishanth
+% License : MIT
+%------------------------
 
-\usepackage[scale=0.80]{geometry}
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
 \usepackage{multicol}
+\usepackage{graphicx}%\setmainfont{Times New Roman}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
 
-% Personal info
-\name{Beckett}{Frey}
-\address{Madison, WI, USA}{Willing to relocate}
-\email{hello@beckettfrey.com}
-\homepage{beckettfrey.com}
-\social[github]{BeckettFrey}
-\social[linkedin]{beckettfrey}
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
 
-\vspace{-2.5em}
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% \usepackage[T1]{fontenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{cochineal}
+% \usepackage{fourier}
+
+% \usepackage{fontspec}
+% \usepackage{polyglossia}
+% \setmainlanguage{german}
+% \setmainfont{Times New Roman}
+
+% serif
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSingleSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.1in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------\usepackage{fontspec}
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
+%----------HEADING----------
 
-\makecvtitle
 
-\section{Summary}
-Software engineer and recent CS graduate who builds things that matter; with a sharp
-  focus on DevOps, developer experience, and security, particularly in environments where data integrity and compliance are non-negotiable. Approaches AI-assisted development deliberately:
-  leveraging automation where it earns trust, and knowing when it hasn't.
-\section{Experience}
+\begin{center}
+    {\huge Beckett Frey} \\ \vspace{2pt} 
+    {+1 (xxx) xxx xxxx} ~ 
+    \small{-}
+    \href{https://github.com/stars/BeckettFrey/lists/portfolio}{\color{blue}{Portfolio}} ~ 
+    \small{-}
+    \href{mailto:hello@beckettfrey.com}{\color{blue}{Email}} ~ 
+    \small{-}
+    \href{https://linkedin.com/in/beckettfrey}{\color{blue}{LinkedIn}}  ~
+    \small{-}
+    \href{https://github.com/beckettfrey}{\color{blue}{GitHub}} ~
+    \vspace{-7pt}
+\end{center}
 
-\cventry{2025--Present}{Research Intern}{Waisman Center}{Madison, WI}{}{
-\begin{itemize}
-\item Developed VoxKit, a GUI application bridging state-of-the-art audio ML models and clinical research workflows
-\item Designed CI/CD pipelines, establishing contributor norms that address the emerging distinction between human and agent authorship
-\item Consolidated reproducible workflows across lab repositories, aiding a 20+ year longitudinal data collection effort
-\item Implemented PHI-scanning tooling and data-leakage safeguards to protect sensitive research data across the full development lifecycle
-\end{itemize}
-}
+%-----------EDUCATION-----------
+\section{\color{airforceblue}EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {UW Milwaukee}{Milwaukee, WI, USA}
+      {B.S. Computer Science}{January 2023 - May 2025}
+    % \vspace{-4pt}
+    %  \resumeSubheading
+    %   {University 2}{Location, State, USA}
+    %   {Degree and Specialization}{Month Year - Month Year}
+  \resumeSubHeadingListEnd
+  \vspace{-10pt}
 
-\cventry{2024--2025}{Junior ML Engineer}{Hyprerchess.ai (Remote)}{}{}{
-\begin{itemize}
-  \item Engineered synthetic data pipelines to train 25 object detection models, achieving over 99\% accuracy via a mixture of experts
-  \item Leveraged Modal serverless compute to overcome local hardware limits and scale training
-\end{itemize}
-}
+%-----------PROGRAMMING SKILLS-----------
+\section{\color{airforceblue}TECHNICAL SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{\normalsize{Programming Languages:}}{ \normalsize{Python, TypeScript, Bash, SQL, R}} \\
+      \vspace{1.2pt}
+      
+     \textbf{\normalsize{Tools and Frameworks:}}{ \normalsize{Django, React, PyQt6, LangGraph, Node.js}} \\
+      \vspace{1.2pt}
 
-\section{Familiar Technologies}
-\cvitem{Languages}{Python, Bash, TypeScript/JavaScript, SQL, R}
-\cvitem{Frameworks}{Django, LangGraph, Node.js, React, Next.js}
-\cvitem{Cloud/DevOps}{Docker, GitHub Actions, AWS, Vercel, Modal}
-\cvitem{ML \& AI}{PyTorch, Anthropic SDK}
-\cvitem{Testing}{Pytest, Vitest}
+     \textbf{\normalsize{Cloud and Infra:}}{ \normalsize{GitHub Actions, Docker, Modal, AWS}} \\
+      \vspace{1.2pt}
+    
+      \textbf{\normalsize{Speech and Audio ML:}}{ \normalsize{Forced Alignment, Whisper, Pyannote}} \\
+      \vspace{1.2pt}
 
-\section{Projects}
+     \textbf{\normalsize{Computer Vision:}}{ \normalsize{Object Detection (YOLO), Synthetic Data, mAP Evaluation}} \\
+      \vspace{1.2pt}
+     % copy and paste above textbf block to add more 
+     }}
+ \end{itemize}
+ \vspace{-16pt}
+ 
+ %-----------EXPERIENCE-----------
+\section{\color{airforceblue}WORK EXPERIENCE}
+  \resumeSubHeadingListStart
 
-\cventry{2026}{Continuous Autonomy}{Founder --- Early-Stage Startup}{}{}{
-\begin{itemize}
-  \item Infrastructure startup rethinking the software development lifecycle, for a world where agents are collaborators
-\end{itemize}
-}
+    \resumeSubheading
+      {Software Engineer (Volunteer)}{} 
+      {Environmental Data \& Governance Initiative, Remote, USA}{January 2026 - Present}
+      \resumeItemListStart
+            \resumeItem{\normalsize{Fix small bugs and ship features which address analyst feedback for the web-monitoring project.}}
+            \resumeItem{\normalsize{Mitigate security concerns by switching to docker hardened images for release and dev phases.}}
+            \resumeItem{\normalsize{Modernize and improve continuous integration with ruff and git hooks, gating low quality code submissions from time consuming review.}}
+            \resumeItem{\normalsize{Collaborate with a team of volunteers across the country for environmental justice.}}
+      \resumeItemListEnd
 
-\cventry{2025}{SpeechMine - Audio Formatting Toolkit}{Faster-Whisper, PyAnnote, RapidFuzz, MCP}{}{}{
-\begin{itemize}
-  \item Converts raw recordings into searchable, speaker-labeled transcripts, replacing labor-intensive manual audio formatting workflows
-  \item Built an MCP server exposing toolkit commands as tools, enabling prompt-driven audio processing automation
-\end{itemize}
-}
+    \resumeSubheading
+      {Research Intern}{} 
+      {Waisman Center, WI, USA}{September 2025 - Present}
+      \resumeItemListStart
+            \resumeItem{\normalsize{Build continuous integration and deployment pipelines with github actions and docker across multiple code repositories to reduce problematic deployments and protect researchers time.}}
+            \resumeItem{\normalsize{Develop Python and Bash scripts to automate repetitive parts of the data collection pipeline.}}  
+            \resumeItem{\normalsize{Collaborate across labs to support the ongoing development of legacy django Infrastructure, focusing on modernization and knowledge continuity.}}
+            \resumeItem{\normalsize{Code and market a cross-platform desktop application for phonetic research, helping onboard less technical researchers and automating metadata tracking for reproducibility.}}
+            \resumeItem{\normalsize{Provide technical support to researchers exploring machine learning for automating pronunciation assessment in children with speech sound disorders.}}
+      \resumeItemListEnd
 
-\cventry{2025}{ContextCaddy / MCP Cabinets}{Python, Llama Index}{}{}{
-\begin{itemize}
-  \item RAG system with configurable vector indexing; paired Chrome extension for saving and retrieving text chunks in real time, for specialized domains
-\end{itemize}
-}
+    \resumeSubheading
+      {Junior ML Engineer}{} 
+      {Hyperchess.ai, Remote, USA}{December 2024 - September 2025}
+      \resumeItemListStart
+            \resumeItem{\normalsize{Engineered and developed a synthetic data pipeline to train 25 YOLO models for piece detection, achieved 99\% mAP@0.5 with a mixture of experts.}}
+            \resumeItem{\normalsize{Deployed inference workloads with Modal serverless GPU, drastically improving the speed of iteration.}}
+      \resumeItemListEnd
 
-\cventry{2025}{AI-Assisted Dev Tools}{Python, LangGraph, GitHub Actions}{}{}{
-\begin{itemize}
-  \item Suite of focused developer tooling: Bonsai (.gitignore-aware tree viewer for AI/CI workflows), Headerizer (file path header stamper), CodeLibre (human-in-the-loop Git automation), Doc Weaver (LangGraph document hydration agent)
-\end{itemize}
-}
+    % copy and paste above resumeSubheading block to add more 
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
 
-\section{Education}
-\cventry{May 2025}{B.S. Computer Science}{University of Wisconsin–Milwaukee}{Milwaukee, WI}{}{
-\textbf{Honors:} Dean's Honor List (Fall 2024, Spring 2025) \\
-\textbf{Coursework:} Computer Security, Machine Learning, Algorithms, Operating Systems
-}
 
-\section{Community \& Involvement}
+ %-----------PROJECTS-----------
+\section{\color{airforceblue}PROJECTS}
+    \resumeItemListStart
+        \vspace{0.5pt}
 
-\cventry{2026--Present}{Member, EDGI}{Environmental Data \& Governance Initiative}{}{}{}
-\cventry{2023--Present}{Open-Source Contributor}{Various Projects}{}{}{
-  Contributions to \href{https://github.com/OpenZeppelin}{\texttt{OpenZeppelin}}, 
-  \href{https://github.com/aws-powertools}{\texttt{AWS Powertools}}, 
-  \href{https://github.com/kobotoolbox}{\texttt{kobotoolbox}}, 
-}
+        \resumeItem{\normalsize{\textbf{Phonetic Research Application}, Cross-platform desktop app that unifies AI/ML tools (MFA, Wav2TextGrid, Faster-Whisper, PyPLLRComputer) behind one interface, letting SLP researchers build and run phonetic analysis pipelines in one place.}  \href{https://voxkit-web.vercel.app/}{\color{blue}\underline{Try it!}}}
+        \vspace{-5pt}
+
+        \resumeItem{\normalsize{\textbf{Data Security Tooling}, Published PyPI tool that scans git repositories for PHI and other identifier patterns. Used to safely open-source several lab repos and caught one real PHI exposure in legacy code.}  \href{https://pypi.org/project/shred-guard/}{\color{blue}\underline{Try it!}}}
+        \vspace{-5pt}
+
+        \resumeItem{\normalsize{\textbf{AI Document Generation}, Divides document generation into per-placeholder tasks queued by batch. Supports context injection and an enforced length range per task.} \href{https://github.com/beckettfrey/doc-weaver-agent}{\color{blue}\underline{GitHub}}}
+        \vspace{-5pt}
+
+        \resumeItem{\normalsize{\textbf{Multiplayer Chess API}, Chess backend in TypeScript/Node.js using WebSockets to sync game state and lobbies across clients.} \href{https://github.com/beckettfrey/ChessLink}{\color{blue}\underline{GitHub}}}
+
+        % copy and paste above resumeItem block to add more 
+        
+    \resumeItemListEnd  
+   
+ \vspace{-12pt}
+%
+
+%-----------Publications---------------
+% \section{\color{airforceblue}PUBLICATIONS}
+    
+%   \resumeItemListStart
+%     \resumeItem{\normalsize{Add Publication details here}}\href{[url link to publication]}{\color{blue}\underline{Link}}
+%     \vspace{-5pt}
+    
+%     \resumeItem{\normalsize{Add Publication details here}}\href{[url link to publication]}{\color{blue}\underline{Link}}
+%     \vspace{-5pt}
+
+%     % copy and paste above resumeItem block to add more 
+    
+%   \resumeItemListEnd 
+      
+% \vspace{-8pt}
+
+%-----------EXTRACURRICULAR---------------
+\section{\color{airforceblue}EXTRACURRICULAR ACTIVITIES}
+    
+      \resumeItemListStart
+
+        \resumeItem{\normalsize{\textbf{Open Source Contributor}, Github -} {Ongoing}}    
+        \vspace{-5pt}
+
+        \resumeItem{\normalsize{\textbf{Runner}, Madison Marathon -} {November 2024}}    
+        \vspace{-5pt}
+        
+        \resumeItem{\normalsize{\textbf{Bartender}, Ralley on the Runway -} {September 2024}} 
+        \vspace{-5pt}
+
+        \resumeItem{\normalsize{\textbf{Triathlete}, IRONMAN Wisconsin -} {September 2023}}    
+        \vspace{-5pt}
+        
+        % copy and paste above resumeItem block to add more 
+      \resumeItemListEnd 
+      
+\vspace{-12pt}
 
 \end{document}
