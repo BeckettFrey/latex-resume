@@ -41,6 +41,11 @@
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
 
+% Color hyperlinks instead of repeating \color{blue} per-link
+\hypersetup{colorlinks=true, urlcolor=cvblue, linkcolor=cvblue}
+% Separator between header contact links
+\newcommand{\sep}{~{\small$\cdot$}~}
+
 %----------FONT OPTIONS----------
 % sans-serif
 % \usepackage[sfdefault]{FiraSans}
@@ -158,16 +163,11 @@
 
 
 \begin{center}
-    {\huge Beckett Frey} \\ \vspace{2pt} 
-    {+1 (xxx) xxx xxxx} ~ 
-    \small{-}
-    \href{https://github.com/stars/BeckettFrey/lists/portfolio}{\color{blue}{Portfolio}} ~ 
-    \small{-}
-    \href{mailto:hello@beckettfrey.com}{\color{blue}{Email}} ~ 
-    \small{-}
-    \href{https://linkedin.com/in/beckettfrey}{\color{blue}{LinkedIn}}  ~
-    \small{-}
-    \href{https://github.com/beckettfrey}{\color{blue}{GitHub}} ~
+    {\huge\bfseries Beckett Frey} \\ \vspace{4pt}
+    \href{https://github.com/stars/BeckettFrey/lists/portfolio}{Portfolio} \sep
+    \href{https://github.com/beckettfrey}{GitHub} \sep
+    \href{https://linkedin.com/in/beckettfrey}{LinkedIn} \sep
+    \href{mailto:hello@beckettfrey.com}{Email}
     \vspace{-7pt}
 \end{center}
 
@@ -250,16 +250,16 @@
     \resumeItemListStart
         \vspace{0.5pt}
 
-        \resumeItem{\normalsize{\textbf{Phonetic Research Application}, Cross-platform desktop app that unifies AI/ML tools (MFA, Wav2TextGrid, Faster-Whisper, PyPLLRComputer) behind one interface, letting SLP researchers build and run phonetic analysis pipelines in one place.}  \href{https://voxkit-web.vercel.app/}{\color{blue}\underline{Try it!}}}
+        \resumeItem{\normalsize{\textbf{Phonetic Research Application}, Cross-platform desktop app that unifies AI/ML tools (MFA, Wav2TextGrid, Faster-Whisper, PyPLLRComputer) behind one interface, letting Speech Language Pathology researchers build and run phonetic analysis pipelines in one place.}  \href{https://voxkit-web.vercel.app/}{Try it!}}
         \vspace{-5pt}
 
-        \resumeItem{\normalsize{\textbf{Data Security Tooling}, Published PyPI tool that scans git repositories for PHI and other identifier patterns. Used to safely open-source several lab repos and caught one real PHI exposure in legacy code.}  \href{https://pypi.org/project/shred-guard/}{\color{blue}\underline{Try it!}}}
+        \resumeItem{\normalsize{\textbf{Data Security Tooling}, Published PyPI tool that scans git repositories for PHI and other identifier patterns. Used to safely open-source several lab repos and caught one real PHI exposure in legacy code.}  \href{https://pypi.org/project/shred-guard/}{Try it!}}
         \vspace{-5pt}
 
-        \resumeItem{\normalsize{\textbf{AI Document Generation}, Divides document generation into per-placeholder tasks queued by batch. Supports context injection and an enforced length range per task.} \href{https://github.com/beckettfrey/doc-weaver-agent}{\color{blue}\underline{GitHub}}}
+        \resumeItem{\normalsize{\textbf{AI Document Generation}, Divides document generation into per-placeholder tasks queued by batch. Supports context injection and an enforced length range per task.} \href{https://github.com/beckettfrey/doc-weaver-agent}{GitHub}}
         \vspace{-5pt}
 
-        \resumeItem{\normalsize{\textbf{Multiplayer Chess API}, Chess backend in TypeScript/Node.js using WebSockets to sync game state and lobbies across clients.} \href{https://github.com/beckettfrey/ChessLink}{\color{blue}\underline{GitHub}}}
+        \resumeItem{\normalsize{\textbf{Multiplayer Chess API}, Chess backend in TypeScript/Node.js using WebSockets to sync game state and lobbies across clients.} \href{https://github.com/beckettfrey/ChessLink}{GitHub}}
 
         % copy and paste above resumeItem block to add more 
         
