@@ -1,0 +1,14 @@
+name: Purge jsDelivr cache
+
+on:
+  push:
+    branches: [main]
+    paths: [resume.pdf]
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge resume.pdf
+        run: |
+          curl -fsS "https://purge.jsdelivr.net/gh/beckettfrey/latex-resume@main/resume.pdf"
