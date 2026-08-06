@@ -164,7 +164,6 @@
 
 \begin{center}
     {\huge\bfseries Beckett Frey} \\ \vspace{4pt}
-    \href{https://github.com/stars/BeckettFrey/lists/portfolio}{Portfolio} \sep
     \href{https://github.com/beckettfrey}{GitHub} \sep
     \href{https://linkedin.com/in/beckettfrey}{LinkedIn} \sep
     \href{mailto:hello@beckettfrey.com}{Email}
@@ -177,12 +176,15 @@
     \resumeSubheading
       {UW Milwaukee}{Milwaukee, WI, USA}
       {B.S. Computer Science}{January 2023 - May 2025}
+      \resumeItemListStart
+        \resumeItem{\normalsize{Dean's Honor List, Fall 2024 \& Spring 2025}}
+      \resumeItemListEnd
     % \vspace{-4pt}
     %  \resumeSubheading
     %   {University 2}{Location, State, USA}
     %   {Degree and Specialization}{Month Year - Month Year}
   \resumeSubHeadingListEnd
-  \vspace{-10pt}
+  \vspace{-16pt}
 
 %-----------PROGRAMMING SKILLS-----------
 \section{\color{airforceblue}TECHNICAL SKILLS}
@@ -196,11 +198,8 @@
 
      \textbf{\normalsize{Cloud and Infra:}}{ \normalsize{GitHub Actions, Docker, Modal, AWS}} \\
       \vspace{1.2pt}
-    
-      \textbf{\normalsize{Speech and Audio ML:}}{ \normalsize{Forced Alignment, Whisper, Pyannote}} \\
-      \vspace{1.2pt}
 
-     \textbf{\normalsize{Computer Vision:}}{ \normalsize{Object Detection (YOLO), Synthetic Data, mAP Evaluation}} \\
+     \textbf{\normalsize{Machine Learning:}}{ \normalsize{Speech (Whisper, Pyannote, Forced Alignment), Vision (YOLO, Synthetic Data)}} \\
       \vspace{1.2pt}
      % copy and paste above textbf block to add more 
      }}
@@ -215,21 +214,28 @@
       {Research Intern}{}
       {Waisman Center, WI, USA}{September 2025 - Present}
       \resumeItemListStart
-            \resumeItem{\normalsize{Code and market a cross-platform desktop application for phonetic research, helping onboard less technical researchers and automating metadata tracking for reproducibility.}}
-            \resumeItem{\normalsize{Support researchers applying machine learning to automate pronunciation assessment for children with speech sound disorders.}}
-            \resumeItem{\normalsize{Build pipelines with GitHub actions and docker across multiple code repositories to protect researchers time.}}
-            \resumeItem{\normalsize{Develop Python and Bash scripts to automate repetitive parts of the data collection pipeline.}}
-            \resumeItem{\normalsize{Collaborate across labs to support the ongoing development of legacy django Infrastructure, focusing on modernization and knowledge continuity.}}
+            \resumeItem{\normalsize{Build and ship a cross-platform desktop application for phonetic research, reducing onboarding friction and improving metadata tracking for reproducible workflows.}}
+            \resumeItem{\normalsize{Develop tooling supporting machine learning workflows for automated pronunciation assessment in children with speech sound disorders.}}
+            \resumeItem{\normalsize{Build CI/CD pipelines with GitHub Actions and Docker across multiple repositories, improving reliability and reducing maintenance overhead for researchers.}}
+            \resumeItem{\normalsize{Collaborate across labs to support the ongoing development of legacy Django infrastructure, focusing on modernization and knowledge continuity.}}
       \resumeItemListEnd
 
+    \resumeSubheading
+  {Software Consultant \& Engineer (Contract)}{}
+  {Independent, Madison, WI, USA}{June 2026 - Present}
+  \resumeItemListStart
+        \resumeItem{\normalsize{Performed application security review of a production SaaS product and delivered prioritized written recommendations to the client.}}
+        \resumeItem{\normalsize{Coordinated an independent third-party security assessment on the client's behalf, from firm evaluation through scoping and engagement.}}
+        \resumeItem{\normalsize{Built out separate development and staging infrastructure to move code changes out of production workflows.}}
+        \resumeItem{\normalsize{Advise a prospective startup founder on technical feasibility, architecture, and MVP scoping.}}
+  \resumeItemListEnd
+  
     \resumeSubheading
       {Software Engineer (Volunteer)}{}
       {Environmental Data \& Governance Initiative, Remote, USA}{January 2026 - Present}
       \resumeItemListStart
             \resumeItem{\normalsize{Resolve bugs and deliver features for the web-monitoring project in response to analyst feedback.}}
-            \resumeItem{\normalsize{Explore Docker Hardened Images to improve container security.}}
             \resumeItem{\normalsize{Improve CI with ruff and git hooks to gate low-quality open-source contributions before review.}}
-            \resumeItem{\normalsize{Collaborate with a team of volunteers across the country for environmental justice.}}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -242,7 +248,7 @@
 
     % copy and paste above resumeSubheading block to add more 
   \resumeSubHeadingListEnd
-\vspace{-12pt}
+\vspace{-17pt}
 
 
  %-----------PROJECTS-----------
@@ -250,16 +256,13 @@
     \resumeItemListStart
         \vspace{0.5pt}
 
-        \resumeItem{\normalsize{\textbf{Phonetic Research Application}, Cross-platform desktop app that unifies AI/ML tools (MFA, Wav2TextGrid, Faster-Whisper, PyPLLRComputer) behind one interface, letting Speech Language Pathology researchers build and run phonetic analysis pipelines in one place.}  \href{https://voxkit-web.vercel.app/}{Try it!}}
+        \resumeItem{\normalsize{\textbf{Phonetic Research Application}, Cross-platform desktop app that unifies AI/ML tools (MFA, Wav2TextGrid, Faster-Whisper, PyPLLRComputer) behind one interface, letting Speech Language Pathology researchers build and run phonetic analysis pipelines in one place. To be presented at Interspeech 2026.}  \href{https://voxkit-web.vercel.app/}{Try it!}}
         \vspace{-5pt}
 
-        \resumeItem{\normalsize{\textbf{Data Security Tooling}, Published PyPI tool that scans git repositories for PHI and other identifier patterns. Used to safely open-source several lab repos and caught one real PHI exposure in legacy code.}  \href{https://pypi.org/project/shred-guard/}{Try it!}}
+        \resumeItem{\normalsize{\textbf{AI Document Generation}, Python CLI and library that fills markdown templates with LLM-generated content under strict length and structure constraints, using batched context-aware generation and a LangGraph morphing loop to enforce character bounds.} \href{https://github.com/BeckettFrey/doc-weaver-agent}{GitHub}}
         \vspace{-5pt}
 
-        \resumeItem{\normalsize{\textbf{AI Document Generation}, Divides document generation into per-placeholder tasks queued by batch. Supports context injection and an enforced length range per task.} \href{https://github.com/beckettfrey/doc-weaver-agent}{GitHub}}
-        \vspace{-5pt}
-
-        \resumeItem{\normalsize{\textbf{Multiplayer Chess API}, Chess backend in TypeScript/Node.js using WebSockets to sync game state and lobbies across clients.} \href{https://github.com/beckettfrey/ChessLink}{GitHub}}
+        \resumeItem{\normalsize{\textbf{Data Security Tooling}, Published PyPI tool that scans git repositories for PII and other identifier patterns. Used to safely open-source several lab repos and caught one real PII exposure in legacy code.}  \href{https://pypi.org/project/shred-guard/}{Try it!}}
 
         % copy and paste above resumeItem block to add more 
         
@@ -294,13 +297,10 @@
 
         \resumeItem{\normalsize{\textbf{Inpatient Unit Support}, UW Health -} {Ongoing}}
         \vspace{-5pt}
-        
-        \resumeItem{\normalsize{\textbf{Bartender}, Ralley on the Runway -} {September 2024}} 
+
+        \resumeItem{\normalsize{\textbf{Triathlete}, IRONMAN Wisconsin -} {September 2023}}
         \vspace{-5pt}
 
-        \resumeItem{\normalsize{\textbf{Triathlete}, IRONMAN Wisconsin -} {September 2023}}    
-        \vspace{-5pt}
-        
         % copy and paste above resumeItem block to add more 
       \resumeItemListEnd 
       
