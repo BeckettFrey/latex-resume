@@ -53,8 +53,7 @@
 % \usepackage[sfdefault]{noto-sans}
 % \usepackage[default]{sourcesanspro}
 
-% \usepackage[T1]{fontenc}
-% \usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc}
 % \usepackage{cochineal}
 % \usepackage{fourier}
 
@@ -65,7 +64,7 @@
 
 % serif
 \usepackage{CormorantGaramond}
-\usepackage{charter}
+\usepackage{XCharter}
 
 % \pagestyle{fancy}
 % \fancyhf{}  % clear all header and footer fields
@@ -94,6 +93,7 @@
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
+\pdfinterwordspaceon % real space chars in the text layer, for parsers
 
 %-------------------------
 % Custom commands
@@ -111,10 +111,11 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\large#1} & \textbf{\small #2} \\
-      \textit{\large#3} & \textit{\small #4} \\
-      
+    % Details sit inline (not right-aligned) so text extraction keeps them with their entry
+    \begin{tabular*}{1.0\textwidth}[t]{l}
+      \textbf{\large#1}\if\relax\detokenize{#2}\relax\else\textbf{ \small| #2}\fi \\
+      \textit{\large#3}\if\relax\detokenize{#4}\relax\else\textit{ \small| #4}\fi \\
+
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -163,7 +164,7 @@
 
 
 \begin{center}
-    {\huge\bfseries Beckett Frey} \\ \vspace{4pt}
+    \pdfinterwordspaceoff{\huge\bfseries Beckett Frey}\pdfinterwordspaceon \\ \vspace{4pt}
     \href{https://github.com/beckettfrey}{github.com/beckettfrey} \sep
     \href{https://linkedin.com/in/beckettfrey}{linkedin.com/in/beckettfrey} \sep
     \href{mailto:hello@beckettfrey.com}{hello@beckettfrey.com}
@@ -222,7 +223,7 @@
 
     \resumeSubheading
       {Research Intern}{}
-      {Waisman Center, WI, USA}{September 2025 - September 2026}
+      {Waisman Center{}, WI, USA}{September 2025 - September 2026}
       \resumeItemListStart
             \resumeItem{\normalsize{Built and shipped a cross-platform desktop application for phonetic research, reducing onboarding friction and improving metadata tracking for reproducible workflows.}}
             \resumeItem{\normalsize{Developed tooling supporting machine learning workflows for automated pronunciation assessment in children with speech sound disorders.}}
